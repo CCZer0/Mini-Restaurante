@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Allerta+Stencil&display=swap');
+
+:root {
+    --cor-primaria: #9B111E; /* Vermelho escuro para destaque */
+    --cor-secundaria: #ECC440; /* Amarelo para o header */
+    --cor-fundo: #fdfdfd; /* Fundo principal claro para legibilidade */
+    --cor-texto: #333333; /* Cor principal do texto */
+    --cor-texto-claro: #ffffff;
+    --sombra-suave: 0 4px 12px rgba(0,0,0,0.1);
+    --fonte-principal: 'Roboto', sans-serif;
+    --fonte-titulo: 'Allerta Stencil', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 60px;
+    width: auto;
+}
+
+header nav ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav li a:hover, header nav li a:focus {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+main {
+    padding: 20px 40px;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Tamanho de fonte responsivo */
+    margin-top: 40px;
+    color: var(--cor-primaria);
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+footer .caixa {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-suave);
+}
+
+footer label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+footer textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: var(--fonte-principal);
+    margin-bottom: 20px;
+}
+
+footer input[type="submit"] {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+footer input[type="submit"]:hover {
+    background-color: #d8b038;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    header nav ul.menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+footer {
+    background-color: #2b2b2b; /* Cor de fundo escura para o rodapé */
+    color: #f0f0f0; /* Cor do texto clara */
+    padding: 40px 20px 10px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Espaçamento entre as seções */
+    padding-bottom: 30px;
+    border-bottom: 1px solid #444; /* Linha sutil de separação */
+}
+
+.footer-section {
+    flex: 1; /* Permite que as seções cresçam igualmente */
+    min-width: 250px; /* Largura mínima para cada seção */
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-secundaria, #ECC440); /* Amarelo para os títulos */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Estilo do link do Instagram */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--cor-secundaria, #ECC440); /* Muda de cor ao passar o mouse */
+}
+
+.social-link svg {
+    transition: transform 0.3s;
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+
+/* Formulário de opinião no rodapé */
+.caixa-footer label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.caixa-footer textarea {
+    width: 100%;
+    max-width: 280px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    font-family: var(--fonte-principal);
+    margin-bottom: 10px;
+}
+
+.caixa-footer input[type="submit"] {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.caixa-footer input[type="submit"]:hover {
+    background-color: #d8b038;
+}
+
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
