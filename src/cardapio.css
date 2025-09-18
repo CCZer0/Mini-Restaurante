@@ -1,0 +1,73 @@
+.secao-cardapio {
+    margin-bottom: 60px;
+}
+
+.grid-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsivo */
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.prato {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.prato:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.prato .img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.prato .title {
+    font-size: 1.5rem;
+    color: var(--cor-primaria, #9B111E); /* Usa variável, com fallback */
+    margin: 10px 0;
+}
+
+.prato p {
+    flex-grow: 1;
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+}
+
+.prato .price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.prato .add {
+    background-color: var(--cor-primaria, #9B111E);
+    color: var(--cor-texto-claro, #ffffff);
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.prato .add:hover {
+    background-color: #7a0d16; /* Tom mais escuro */
+    transform: scale(1.05);
+}
